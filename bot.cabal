@@ -18,3 +18,4 @@ executable bot
     , text
     , websockets >= 0.12 && <1
     , aeson >= 1.4 && <2
+    , bytestring >= 0.10 && <2
