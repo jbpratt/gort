@@ -94,4 +94,4 @@ parseMessage msg =
       ChatMessage
 
 parseMessageContent :: T.Text -> T.Text
-parseMessageContent = T.pack . unwords . tail . words . T.unpack
+parseMessageContent =  T.unwords . tail . T.words
