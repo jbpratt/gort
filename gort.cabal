@@ -1,0 +1,22 @@
+name:           gort
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/jbpratt78/gort#readme>
+homepage:       https://github.com/jbpratt78/gort#readme
+bug-reports:    https://github.com/jbpratt78/gort/issues
+author:         jbpratt78
+maintainer:     jbpratt78@gmail.com
+copyright:      2020 jbpratt78
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+executable bot
+  main-is: bot.hs
+  other-modules: 
+  build-depends:
+      base >=4.7 && <5
+    , wuss >=1.1 && <2
+    , text
+    , websockets >= 0.12 && <1
+    , aeson >= 1.4 && <2
+    , bytestring >= 0.10 && <2

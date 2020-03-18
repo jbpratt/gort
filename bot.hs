@@ -47,7 +47,7 @@ data ChatMessage = ChatMessage {
     , content :: T.Text
     , features :: [T.Text]
     , timestamp :: Data.Int.Int64
-    } deriving (Generic, Show)
+    } deriving (Generic, Show, Eq)
 
 
 instance FromJSON ChatMessage where
@@ -94,4 +94,7 @@ parseMessage msg =
       ChatMessage
 
 parseMessageContent :: T.Text -> T.Text
-parseMessageContent =  T.unwords . tail . T.words
+parseMessageContent = T.unwords . tail . T.words
+
+onChatMessage :: ChatMessage -> Bool
+onChatMessage msg = content msg == "!comfy"
