@@ -95,6 +95,3 @@ parseMessage msg =
 
 parseMessageContent :: T.Text -> T.Text
 parseMessageContent = T.unwords . tail . T.words
-
-onChatMessage :: ChatMessage -> Bool
-onChatMessage msg = content msg == "!comfy"
